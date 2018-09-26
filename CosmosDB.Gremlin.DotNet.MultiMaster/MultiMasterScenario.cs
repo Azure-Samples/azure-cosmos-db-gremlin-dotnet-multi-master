@@ -21,7 +21,7 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
             int gremlinServerPort = int.Parse(ConfigurationManager.AppSettings["GremlinServerPort"]);
             string accountKey = ConfigurationManager.AppSettings["AuthorizationKey"];
 
-            string[] regions = ConfigurationManager.AppSettings["regions"].Split(new string[] { ";" },
+            string[] regions = ConfigurationManager.AppSettings["regions"].Split(new string[] { "," },
                 StringSplitOptions.RemoveEmptyEntries);
 
             string database = ConfigurationManager.AppSettings["databaseName"];

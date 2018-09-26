@@ -9,6 +9,7 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
     using System.Linq;
     using System.Threading.Tasks;
     using global::Gremlin.Net.Driver;
+    using System.Configuration;
 
     internal sealed class ConflictWorker
     {
@@ -79,7 +80,7 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
         {
             try
             {
-                return await client.GremlinClient.SubmitAsync<dynamic>($"g.withStrategies(ProjectionStrategy.build().IncludeSystemProperties('_ts').create()).addV().property('id', '{id}').property('regionId', {index}).property('regionEndpoint', '{client.Endpoint}')");
+                return await client.GremlinClient.SubmitAsync<dynamic>($"g.withStrategies(ProjectionStrategy.build().IncludeSystemProperties('{ConfigurationManager.AppSettings["conflict_resolver_property"]}').create()).addV().property('id', '{id}').property('regionId', {index}).property('regionEndpoint', '{client.Endpoint}')");
             }
             catch (Exception ex)
             {
@@ -108,7 +109,7 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
             foreach (dynamic vertex in conflictDocument)
             {
                 Dictionary<string, object> props = (Dictionary<string, object>)((Dictionary<string, object>)vertex[0])["properties"];
-                List<object> tsObject= ((IEnumerable<object>)props["_ts"]).ToList();
+                List<object> tsObject= ((IEnumerable<object>)props[ConfigurationManager.AppSettings["conflict_resolver_property"]]).ToList();
 
                 long ts = (long)((Dictionary<string, object>)tsObject[0])["value"];
 
@@ -127,7 +128,7 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
             {
                 try
                 {
-                    long existsingTs = (long)(await client.GremlinClient.SubmitAsync<dynamic>($"g.withStrategies(ProjectionStrategy.build().IncludeSystemProperties('_ts').create()).V('{id}').values('_ts')")).First();
+                    long existsingTs = (long)(await client.GremlinClient.SubmitAsync<dynamic>($"g.withStrategies(ProjectionStrategy.build().IncludeSystemProperties('{ConfigurationManager.AppSettings["conflict_resolver_property"]}').create()).V('{id}').values('{ConfigurationManager.AppSettings["conflict_resolver_property"]}')")).First();
 
                     if (existsingTs == winnerTs)
                     {

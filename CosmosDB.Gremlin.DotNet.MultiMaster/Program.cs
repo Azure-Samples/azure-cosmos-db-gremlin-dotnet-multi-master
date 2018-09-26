@@ -4,6 +4,7 @@
 
 namespace CosmosDB.Gremlin.DotNet.MultiMaster
 {
+    using System;
     using System.Threading.Tasks;
 
     class Program
@@ -11,6 +12,8 @@ namespace CosmosDB.Gremlin.DotNet.MultiMaster
         static void Main(string[] args)
         {
             Program.RunScenariosAsync().GetAwaiter().GetResult();
+            Console.WriteLine("\nSample finished execution successfully. Please press any key to continue ....");
+            Console.ReadLine();
         }
 
         static async Task RunScenariosAsync()
