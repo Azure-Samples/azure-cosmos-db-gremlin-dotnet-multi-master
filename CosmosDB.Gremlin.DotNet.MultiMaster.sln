@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmosDB.Gremlin.DotNet.MultiMaster", "CosmosDB.Gremlin.DotNet.MultiMaster\CosmosDB.Gremlin.DotNet.MultiMaster.csproj", "{D16B740F-9598-40A4-8FA7-F5441EC905AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D16B740F-9598-40A4-8FA7-F5441EC905AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16B740F-9598-40A4-8FA7-F5441EC905AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16B740F-9598-40A4-8FA7-F5441EC905AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16B740F-9598-40A4-8FA7-F5441EC905AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F020AFAF-D46C-41E4-8D5D-C98DCC286CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F020AFAF-D46C-41E4-8D5D-C98DCC286CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F020AFAF-D46C-41E4-8D5D-C98DCC286CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F020AFAF-D46C-41E4-8D5D-C98DCC286CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A59BA1-A24E-47D5-860D-8F48EC2308BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A59BA1-A24E-47D5-860D-8F48EC2308BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A59BA1-A24E-47D5-860D-8F48EC2308BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A59BA1-A24E-47D5-860D-8F48EC2308BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52681BEA-CC76-4CC1-A3CE-8C09869018E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52681BEA-CC76-4CC1-A3CE-8C09869018E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52681BEA-CC76-4CC1-A3CE-8C09869018E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52681BEA-CC76-4CC1-A3CE-8C09869018E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
