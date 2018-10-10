@@ -1,6 +1,4 @@
-# Project Name
-
-Multi master conflict generation and resolution samples for Gremlin API in .NET
+# Multi master conflict generation and resolution samples for Gremlin API in .NET
 
 ## Getting Started
 
@@ -14,6 +12,22 @@ The sample assumes that
 
 ### Installation
 
-Intsall Gremlin .NET
+The only dependency is the [Gremlin.Net driver](http://tinkerpop.apache.org/docs/3.3.0/reference/#gremlin-DotNet), which you can install with the following instructions:
 
+- Using .NET CLI:
 
+    ```
+    dotnet add package Gremlin.Net
+    ```
+
+- Using Powershell Package Manager:
+
+    ```
+    Install-Package Gremlin.Net
+    ```
+
+- For *.NET CORE* use the `nuget` [command-line utility](https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools):
+
+    ```
+    nuget install Gremlin.Net
+    ```
