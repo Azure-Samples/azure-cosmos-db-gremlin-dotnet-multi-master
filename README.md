@@ -1,3 +1,13 @@
+---
+page_type: sample
+languages:
+- csharp
+products:
+- azure
+description: "Multi master conflict generation and resolution samples for Gremlin API in .NE"
+urlFragment: azure-cosmos-db-gremlin-dotnet-multi-master
+---
+
 # Multi master conflict generation and resolution samples for Gremlin API in .NET
 
 ## Getting Started
