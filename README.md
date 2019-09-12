@@ -4,7 +4,7 @@ languages:
 - csharp
 products:
 - azure
-description: "Multi master conflict generation and resolution samples for Gremlin API in .NE"
+description: "Multi master conflict generation and resolution samples for Gremlin API in .NET"
 urlFragment: azure-cosmos-db-gremlin-dotnet-multi-master
 ---
 
